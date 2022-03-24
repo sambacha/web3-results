@@ -1,8 +1,21 @@
+/**
+ * 
+ * 
+ */
+
+
+
+/* Defining the type of the `res` property of the `IResultOk<T>` interface. */
 export interface IResultOk<T> {
   res: T;
   err?: undefined;
 }
-
+/**
+ * 
+ *
+ * @export
+ * @interface IResultErr
+ */
 export interface IResultErr {
   res?: undefined;
   err: string;
@@ -10,6 +23,13 @@ export interface IResultErr {
 
 export type TResult<T> = IResultOk<T> | IResultErr;
 
+/**
+ * 
+ *
+ * @export
+ * @class Result
+ * @template T 
+ */
 export class Result<T> {
   public static from<T>(value: TResult<T>) {
     return new Result(value);

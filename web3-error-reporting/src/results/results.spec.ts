@@ -1,5 +1,13 @@
 import { Result } from './results';
 
+
+// /**
+//  *
+//  *
+//  * @export
+//  * @class Result
+//  * @template T
+//  */
 describe('Success Tests', () => {
   it('Should create a result instance that is successful', () => {
     const r = Result.from({ res: 'hello world' });
@@ -16,11 +24,13 @@ describe('Success Tests', () => {
     expect(r.expect('Invalid string')).toEqual('hello world');
   });
 
+ // it('Should unwrap via "expect" method on success', () => {
   it('Should return a boolean true value on success when using "ok" method', () => {
     const r = Result.from({ res: 'hello world' });
     expect(r.ok()).toEqual(true);
   });
 
+ // it('Should return a boolean false value on failure when using "ok" method', () => {
   it('Should chain values and their types using the "and" method ', () => {
     const f1 = (n: number): Result<string> => Result.from({ res: `${n}` });
     const f2 = (str: string): Result<number> => Result.from({ res: +str });

@@ -47,18 +47,27 @@
     }
   ],
   "devDependencies": {
+    "@ethersproject/bignumber": "^5.6.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/react": "^17.0.41",
     "@types/react-dom": "^17.0.14",
     "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-ga": "^3.3.0",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
+    "typedoc": "^0.22.13",
     "typescript": "^4.6.2"
   },
   "dependencies": {
-    "tiny-invariant": "^1.2.0"
+    "@findeth/abi": "^0.7.1",
+    "@types/ua-parser-js": "^0.7.36",
+    "@types/verror": "^1.10.5",
+    "isomorphic-unfetch": "^3.1.0",
+    "tiny-invariant": "^1.2.0",
+    "ua-parser-js": "^1.0.2",
+    "verror": "^1.10.1"
   }
 }
