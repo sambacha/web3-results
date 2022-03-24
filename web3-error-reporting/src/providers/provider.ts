@@ -36,6 +36,7 @@ export const call = async (providerLike: ProviderLike, contractAddress: string, 
 
     return fromHex(result);
   } catch (error) {
+    // @ts-ignore
     throw new Error(`Failed to get data from contract: ${error.stack ?? error.toString()}`);
   }
 };
